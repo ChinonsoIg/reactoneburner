@@ -70,7 +70,7 @@ const Demo = () => {
         </Box>
       </Container>
       <Container className={classes.sectionTwo}>
-        <h3>Over 500+ companoes bond teams together with Oneburner</h3>
+        <h3>Over 500+ companies bond teams together with Oneburner</h3>
         <img src={companies} alt="List of partner companies" style={{width:"100%"}} />
       </Container>
       <Container className={classes.sectionThree}>

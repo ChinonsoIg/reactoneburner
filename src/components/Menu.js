@@ -11,6 +11,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 
 
 // Menu
@@ -28,7 +29,9 @@ import PowerIcon from '@material-ui/icons/Power';
 import SubjectIcon from '@material-ui/icons/Subject';
 import LocalMallIcon from '@material-ui/icons/LocalMall';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
-import { purple } from '@material-ui/core/colors';
+
+// Images
+import oneburner_logo from '../svgs/constants/oneburner_logo.svg';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -40,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "20px",
     backgroundColor: "white",
     color: "black",
+    height: "70px"
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -81,13 +85,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     backgroundColor: "purple",
-    padding: "0.6rem",
+    padding: "0.2rem",
     color: 'white',
     borderRadius: '20px',
   },
 }));
 
-const MenuBar = () => {
+const MenuBar = ({ menuProps1, menuProps1Icon, menuProps2, menuProps3, menuProps4, menuProps5, menuProps6 }) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -192,27 +196,22 @@ const MenuBar = () => {
     <div className={classes.grow}>
       <AppBar position="static" className={classes.centre}>
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />oneburner
-          </IconButton>
+        <Box style={{height:"70px"}} lineHeight={1.5}>
+          <img src={oneburner_logo} alt="Logo" style={{maxWidth:"100%", maxHeight:"100%"}} />
+        </Box>
 
         <p className={classes.menuItems}>
-        <span
-          ref={anchorRef}
-          aria-controls={open ? 'menu-list-grow' : undefined}
-          aria-haspopup="true"
-          onClick={handleToggle}
-        >
-          Products
-          <ExpandMoreIcon />
-        </span>
-        
-        <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+          <span
+            ref={anchorRef}
+            aria-controls={open ? 'menu-list-grow' : undefined}
+            aria-haspopup="true"
+            onClick={handleToggle}
+          >
+            {menuProps1}
+            {menuProps1Icon}
+          </span>
+          
+          <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
           {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
@@ -274,14 +273,17 @@ const MenuBar = () => {
         </p>
 
 
-          <p className={classes.menuItems}>Pricing</p>
-          <p className={classes.menuItems}>Enterprise</p>
-          <p className={classes.menuItems}>Support</p>
+          <p className={classes.menuItems}>{menuProps2}</p>
+          <p className={classes.menuItems}>{menuProps3}</p>
+          <p className={classes.menuItems}>{menuProps4}</p>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <p className={classes.menuItemsRight}>Contact Sales</p>
-            <p className={classes.menuItemsRight}>Login</p>
-            <Button className={classes.button}>Try for free</Button>
+            <p className={classes.menuItemsRight}>{menuProps5}</p>
+            <p className={classes.menuItemsRight}>{menuProps6}</p>
+            <Button className={classes.button}>
+              Try for free
+              <KeyboardArrowRightIcon />
+            </Button>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

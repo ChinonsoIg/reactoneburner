@@ -8,25 +8,42 @@ import Box from '@material-ui/core/Box';
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSlash, faCheckCircle, faAward, faFileExcel } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faAward } from "@fortawesome/free-solid-svg-icons";
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 // Components
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 
+// Images
+import section_one_landing from '../svgs/landing-page/section_one_landing.svg';
+import africa from '../svgs/landing-page/africa.svg';
+import ceo from '../svgs/landing-page/ceo.svg';
+import companies from '../svgs/constants/companies.svg';
+import fav_tools from '../svgs/constants/fav_tools.svg';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 const useStyles = makeStyles((theme) => ({
-  section1: {
+  sectionOneLanding: {
     height: "100vh",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center"
   },
-  section3: {
-    height: "100vh",
+  sectionThreeLanding: {
+    backgroundColor: "white",
+    // height: "100vmin",
   },
-  section4: {
-    height: "100vh",
+  sectionFourLanding: {
+    // height: "100vh",
+  },
+  sectionFiveLanding: {
+    height: "50vh",
+  },
+  sectionSixLanding: {
+    height: "50vh",
+    backgroundColor: "lightgray",
+    padding: theme.spacing(5),
   },
   button: {
     backgroundColor: "blue",
@@ -34,45 +51,41 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "40px",
     padding: "1.5rem",
     fontSize: "18px",
-    width: "fit-content",
-    alignSelf: "center",
+    width: "300px",
+    height: "10%"
+    // alignSelf: "center",
   },
 }));
 
-const Landing = ({ menuProps1 }) => {
+const Landing = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-        <Menu menuProps1="Products" />
+        <Menu 
+          menuProps1="Products" 
+          menuProps1Icon={<ExpandMoreIcon/>} 
+          menuProps2="Pricing"
+          menuProps3="Enterprise"
+          menuProps4="Support"
+          menuProps5="Contact Sales"
+          menuProps6="Login"
+        />
         <CssBaseline />
-        <Container className={classes.section1}>
-          <h1>Modern solutiion built for your enterprise growth</h1>
-          <p>Centralise your team in a secure, flexible and managed platform</p>
-          <Button className={classes.button}>
-            Request a demo
-            <KeyboardArrowRightIcon />
-          </Button>
-          <p>Over 500+ companies bond teams together with Oneburner</p>
-          <Box
-            display="flex"
-            flexWrap="wrap"
-            p={1}
-            m={1}
-            justifyContent="space-between"
-            alignItems="center"
-            >
-            <Box>PayStack</Box>
-            <Box>EgyptAir</Box>
-            <Box>Dangote</Box>
-            <Box>Standard</Box>
-            <Box>MTN</Box>
-            <Box>GTB</Box>
-            <Box>Skooleeo</Box>
+        <Container className={classes.sectionOneLanding}>
+          <Box width="100%" height="100vmin" marginTop="40px">
+            <img src={section_one_landing} style={{width:"100%"}} />
+          </Box>          
+        </Container>
+
+        <Container className="sectionTwoLanding">
+          <Box>
+            <h3>Over 500+ companies bond teams together with Oneburner</h3>
+            <img src={companies} style={{width:"100%"}} />
           </Box>
         </Container>
 
-        <Container className={classes.section2}>
-          <h3
+        <Container className={classes.sectionThreeLanding}>
+          <h4
             style={{ 
               paddingTop: "20px",
               paddingBottom: "0",
@@ -83,18 +96,18 @@ const Landing = ({ menuProps1 }) => {
               color: "white",
              }}>
             How Oneburner can help enterprises grow
-          </h3>
+          </h4>
           <Box
             style={{ 
-              marginBottom: "0",
+              marginBottom: "10px",
               paddingTop: "0px",
-              height: "100vh",
+              height: "120vmin",
               position: "relative",
               width: "100%" }}>
             <Box
               position="absolute"
               top={0}
-              height="50%"
+              height="48%"
               color="white"
               bgcolor="blue"
               zIndex="modal">
@@ -107,7 +120,7 @@ const Landing = ({ menuProps1 }) => {
                 alignItems="flex-start"
                 width="100%"
                 >
-                <div style={{textAlign:"left", width:"48%", marginRight:"1%"}}>Oneburner softwaresolution helps your business by creating an enabling environment for easy communication and feedbacks in real time. Oneburner brings all your user and teams in a single place with 99.99% uptime SLA and Data security.
+                <div style={{textAlign:"left", width:"48%", marginRight:"1%"}}>Oneburner software solution helps your business by creating an enabling environment for easy communication and feedbacks in real time. Oneburner brings all your user and teams in a single place with 99.99% uptime SLA and Data security.
                 </div>
                 <div style={{textAlign:"left", width:"48%", marginLeft:"1%"}}>
                   <p style={{paddingTop:"0", marginTop:"0"}}>
@@ -132,7 +145,7 @@ const Landing = ({ menuProps1 }) => {
             <Box
               bgcolor="background.paper"
               color="black"
-              p={2}
+              p={1}
               position="absolute"
               top="40%"
               left="25%"
@@ -141,58 +154,56 @@ const Landing = ({ menuProps1 }) => {
               borderRadius="5px"
               boxShadow={2}
               zIndex="tooltip">
-              <FontAwesomeIcon icon={faAward} size={30} />
-              <h3>Best Collaboration Software</h3>
+              <FontAwesomeIcon icon={faAward} size="3x" />
+              <h6>Best Collaboration Software</h6>
               <p>Africa tech coalition award 2020</p>
             </Box>
             <Box
               position="absolute"
-              top="50%"
-              height="50%"
+              top="62%"
+              height="32%"
               width="100%"
               bgcolor="white"
               zIndex="modal"
               >
-              <Box marginTop="8%">Integrate with your favourite tools easily in one click</Box>
-              <Box
-                display="flex"
-                flexWrap="wrap"
-                p={1}
-                m={1}
-                justifyContent="space-between"
-                alignItems="center"
-              >
-                <Box><i class="fab fa-slack"></i></Box>
-                <Box><FontAwesomeIcon icon={faSlash} /></Box>
-                <Box>PayStack</Box>
-                <Box>EgyptAir</Box>
-                <Box>Dangote</Box>
-                <Box>Standard</Box>
-                <Box>MTN</Box>
-                <Box>GTB</Box>
-                <Box>Skooleeo</Box>
-              </Box>
+              <img src={fav_tools} style={{width:"100%"}} />
             </Box>
           </Box>
 
         </Container>
 
-        <Container className={classes.section3}>
-          <h3>Our Regional Presence</h3>
-          <p>Lorem ipsum is simply dummy text....</p>
-          <img src="" alt="Map of Africa" />
+        <Container className={classes.sectionFourLanding}>
+          <Box width="100%" height="100vmin" margin="auto">
+            <img src={africa} style={{width:"100%"}} />
+          </Box>
         </Container>
 
-        <Container className={classes.section4}>
-          <div>Best Product Ever</div>
-          <div><img src="" alt="Image of CEO" /></div>
-          <div>
+        <Container className={classes.sectionFiveLanding}>
+          <Box
+            display="flex"
+            flexDirection="column"
+            p={2}
+            m={2}
+            justifyContent="space-between"
+            alignItems="center"
+            height="50vmin"
+            width="100%"
+          >
+            <p style={{marginBottom:"20px"}}>Best. Product. Ever! We like Oneburner more and more each day because it makes our work a lot easier. It's just amazing. Very easy to use, impressed us on all levels. Thank you so much for your help and is worth much more than we paid. We were treated like royalty.</p>
+            <div style={{borderTop:"2px solid black", width:"100%"}}>
+            <img src={ceo} alt="Image of CEO" style={{marginTop:"-60px", width:"30%", backgroundColor:"white"}} />
+            </div>
+          </Box>
+        </Container>
+        
+        <Container className={classes.sectionSixLanding}>
+          <Box >
             <h4>Want to learn more on how we can impact your enterprise?</h4>
             <button className={classes.button}>
               Contact Sales
               <KeyboardArrowRightIcon />
             </button>
-          </div>
+          </Box>
         </Container>
 
         <Footer />

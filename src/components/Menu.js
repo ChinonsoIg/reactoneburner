@@ -1,4 +1,12 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+// Material UI Components
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -12,9 +20,6 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
-
-
-// Menu
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
 import Popper from '@material-ui/core/Popper';
@@ -23,7 +28,6 @@ import MenuList from '@material-ui/core/MenuList';
 
 
 // icons
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import PowerIcon from '@material-ui/icons/Power';
 import SubjectIcon from '@material-ui/icons/Subject';
@@ -146,13 +150,17 @@ const MenuBar = ({ menuProps1, menuProps1Icon, menuProps2, menuProps3, menuProps
       <MenuItem>
         <p>Contact Sales</p>
       </MenuItem>
-      <MenuItem>        
-        <p>Login</p>
+      <MenuItem>
+        <p>
+          <Link to="/login"  style={{ textDecoration:"none"}}>Login</Link>
+        </p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <Button className={classes.button}>
-          Try For Free
-          <KeyboardArrowRightIcon />
+          <Link to="/register" style={{color:"white", textDecoration:"none"}}>
+            Try For Free
+            <KeyboardArrowRightIcon />
+          </Link>
         </Button>
       </MenuItem>
     </Menu>
@@ -197,7 +205,9 @@ const MenuBar = ({ menuProps1, menuProps1Icon, menuProps2, menuProps3, menuProps
       <AppBar position="static" className={classes.centre}>
         <Toolbar>
         <Box style={{height:"70px"}} lineHeight={1.5}>
-          <img src={oneburner_logo} alt="Logo" style={{maxWidth:"100%", maxHeight:"100%"}} />
+          <Link to="/landing">
+            <img src={oneburner_logo} alt="Logo" style={{maxWidth:"100%", maxHeight:"100%"}} />
+          </Link>
         </Box>
 
         <p className={classes.menuItems}>
@@ -279,10 +289,16 @@ const MenuBar = ({ menuProps1, menuProps1Icon, menuProps2, menuProps3, menuProps
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <p className={classes.menuItemsRight}>{menuProps5}</p>
-            <p className={classes.menuItemsRight}>{menuProps6}</p>
+            <p className={classes.menuItemsRight}>
+              <Link to="/login" style={{ textDecoration:"none"}}>
+                {menuProps6}
+              </Link>
+            </p>
             <Button className={classes.button}>
-              Try for free
-              <KeyboardArrowRightIcon />
+              <Link to="/register" style={{color:"white", textDecoration:"none"}}>
+                Try for free
+                <KeyboardArrowRightIcon />
+              </Link>
             </Button>
           </div>
           <div className={classes.sectionMobile}>

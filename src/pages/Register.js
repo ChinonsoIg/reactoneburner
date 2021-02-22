@@ -1,4 +1,12 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+// Material UI Components
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -6,9 +14,11 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
 
+// My Components
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 
+// Icons
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     width: "50%",
-    border: "2px solid red",
+    // border: "2px solid red",
     padding: "5px",
     height: "fit-content",
     padding: "10px"
@@ -77,7 +87,7 @@ const Register = () => {
                 alignItems:"center",
                 // height:"fit-content",
                 width:"90%",
-                border:"2px solid red",
+                // border:"2px solid red",
                 margin:"auto"
               }}
               >
@@ -128,7 +138,9 @@ const Register = () => {
                 variant="outlined" />
 
               <Button className={classes.button}>
-                Contact Us
+                <Link to="/demo"  style={{color:"white", textDecoration:"none"}}>
+                  Contact Us
+                </Link>                
               </Button>
             </form>
           </Paper>
@@ -231,13 +243,3 @@ const Register = () => {
 }
 
 export default Register;
-
-// root: {
-//   display: 'flex',
-//   flexWrap: 'wrap',
-// },
-// textField: {
-//   marginLeft: theme.spacing(1),
-//   marginRight: theme.spacing(1),
-//   width: '25ch',
-// },

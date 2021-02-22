@@ -3,10 +3,25 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+import oneburner_logo from '../svgs/constants/oneburner_logo.svg';
+import language from '../svgs/footer/language.svg';
+
 const Footer = () => {
 
   return (
     <Container>
+      <Box
+        display="flex"
+        flexWrap="nowrap"
+        p={2}
+        m={2}
+        justifyContent="space-between"
+        alignItems="space-between"
+        width="100%"
+        >
+        <img src={oneburner_logo} />
+        <img src={language} />
+      </Box>
       <Box
         display="flex"
         flexWrap="nowrap"

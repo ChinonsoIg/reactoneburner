@@ -1,3 +1,11 @@
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import './App.css';
 
 import Landing from "./pages/Landing";
@@ -8,7 +16,22 @@ import Register from "./pages/Register";
 function App() {
   return (
     <div className="App">
-      <Register />
+      <Router>
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/demo">
+            <Demo />
+          </Route>
+          <Route path="/">
+            <Landing />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

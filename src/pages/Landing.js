@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
@@ -200,8 +207,10 @@ const Landing = () => {
           <Box >
             <h4>Want to learn more on how we can impact your enterprise?</h4>
             <button className={classes.button}>
-              Contact Sales
-              <KeyboardArrowRightIcon />
+              <Link to="/login"  style={{color:"white", textDecoration:"none"}}>
+                Contact Sales
+                <KeyboardArrowRightIcon />
+              </Link>
             </button>
           </Box>
         </Container>

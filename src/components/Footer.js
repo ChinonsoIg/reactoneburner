@@ -9,47 +9,58 @@ import language from '../svgs/footer/language.svg';
 const Footer = () => {
 
   return (
-    <Container>
+    <Container style={{border:"1px solid green"}}>
       <Box
         display="flex"
+        flexDirection="column"
         flexWrap="nowrap"
-        p={2}
-        m={2}
+        // pt={5}
         justifyContent="space-between"
         alignItems="space-between"
         width="100%"
+        border="1px solid red"
         >
-        <img src={oneburner_logo} />
-        <img src={language} />
-      </Box>
-      <Box
-        display="flex"
-        flexWrap="nowrap"
-        p={2}
-        m={2}
-        justifyContent="space-between"
-        alignItems="flex-start"
-        width="100%"
-      >
-        <Box flexGrow={1} style={{textAlign:"left", width:"50%"}}>
-          <Typography gutterBottom variant="subtitle1">
-            No 1 CRM solution in Africa
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            Terms of Use | Privacy Policy
-          </Typography>
-          <Box style={{paddingTop:"1rem"}}>
-            <Typography variant="body2" style={{ cursor: 'pointer' }}>
-              Get in touch
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              +234-80-000-000
-            </Typography>
-            <Typography>Social media icons</Typography>
-          </Box>
+        <Box
+          display="flex"
+          flexWrap="nowrap"
+          pt={5}
+          justifyContent="space-between"
+          alignItems="space-between"
+          width="100%"
+          border="1px solid red"
+          >
+          <img src={oneburner_logo} style={{width:"25%"}} />
+          <img src={language} style={{width:"25%"}} />
         </Box>
+        <Box
+          display="flex"
+          flexWrap="nowrap"
+          // p={2}
+          // m={2}
+          justifyContent="space-between"
+          alignItems="flex-start"
+          width="100%"
+          border="1px solid yellow"
+          >
+          <Box style={{textAlign:"left", width:"50%"}}>
+            <Typography gutterBottom variant="subtitle1">
+              No 1 CRM solution in Africa
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              Terms of Use | Privacy Policy
+            </Typography>
+            <Box style={{paddingTop:"1rem"}}>
+              <Typography variant="body2" style={{ cursor: 'pointer' }}>
+                Get in touch
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                +234-80-000-000
+              </Typography>
+              <Typography>Social media icons</Typography>
+            </Box>
+          </Box>
 
-        <Box style={{textAlign:"left", width:"16%", marginLeft:"1%"}}>
+          <Box style={{textAlign:"left", width:"16%", marginLeft:"1%"}}>
           <Typography gutterBottom variant="subtitle1">
             PRODUCT
           </Typography>
@@ -79,7 +90,7 @@ const Footer = () => {
           </Typography>
         </Box>
         
-        <Box style={{textAlign:"left", width:"16%", marginLeft:"1%"}}>
+          <Box style={{textAlign:"left", width:"16%", marginLeft:"1%"}}>
           <Typography gutterBottom variant="subtitle1">
             COMPANY
           </Typography>
@@ -97,7 +108,7 @@ const Footer = () => {
           </Typography>
         </Box>
         
-        <Box style={{textAlign:"left", width:"16%", marginLeft:"1%"}}>
+          <Box style={{textAlign:"left", width:"16%", marginLeft:"1%"}}>
           <Typography gutterBottom variant="subtitle1">
             ONEBURNER FOR TEAMS
           </Typography>
@@ -129,8 +140,9 @@ const Footer = () => {
             Remote Work
           </Typography>
         </Box>
-      </Box>
+        </Box>
 
+      </Box>
       <hr />
       <p style={{textAlign:"left"}}>&copy; 2020 Oneburner.com. All Rights Reserved.</p>
     </Container>

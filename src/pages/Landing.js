@@ -53,12 +53,12 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(5),
   },
   button: {
-    backgroundColor: "blue",
+    backgroundColor: "#0039a6",
     color: "white",
     borderRadius: "40px",
-    padding: "1.5rem",
-    fontSize: "18px",
-    width: "300px",
+    padding: "2%",
+    fontSize: "2.5vw",
+    width: "40%",
     height: "10%"
     // alignSelf: "center",
   },
@@ -210,7 +210,7 @@ const Landing = () => {
           >
             <p style={{marginBottom:"20px"}}>Best. Product. Ever! We like Oneburner more and more each day because it makes our work a lot easier. It's just amazing. Very easy to use, impressed us on all levels. Thank you so much for your help and is worth much more than we paid. We were treated like royalty.</p>
             <div style={{borderTop:"2px solid black", width:"100%"}}>
-            <img src={ceo} alt="Image of CEO" style={{marginTop:"-60px", width:"30%", backgroundColor:"white"}} />
+            <img src={ceo} alt="Image of CEO" style={{marginTop:"-60px", padding:"0 10px", width:"35%", backgroundColor:"white"}} />
             </div>
           </Box>
         </Container>
@@ -219,7 +219,17 @@ const Landing = () => {
           <Box >
             <h4>Want to learn more on how we can impact your enterprise?</h4>
             <button className={classes.button}>
-              <Link to="/login"  style={{color:"white", textDecoration:"none"}}>
+              <Link 
+                to="/register"  
+                style={{
+                  color:"white", 
+                  textDecoration:"none", 
+                  display:"flex",
+                  flexDirection:"row",
+                  flexWrap:"nowrap",
+                  justifyContent:"space-evenly",
+                  alignItems:"center"
+                }}>
                 Contact Sales
                 <KeyboardArrowRightIcon />
               </Link>

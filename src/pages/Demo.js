@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
@@ -31,10 +38,14 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "50px"
   },
   button: {
-    backgroundColor: "blue",
-    padding: "0.6rem",
-    color: 'white',
-    borderRadius: '20px',
+    backgroundColor: "#0039a6",
+    color: "white",
+    borderRadius: "50px",
+    padding: "1.5%",
+    fontSize: "2vw",
+    // width: "75%",
+    // height: "5%",
+
   },
 }));
 
@@ -59,9 +70,22 @@ const Demo = () => {
           <div style={{textAlign:"center", width:"42%", marginRight:"1%"}}>
             <h2>Collaborate with your team and get more done</h2>
             <p>Communicate effectively with Oneburner for easy collaboration, team work and remote work</p>
-            <Button className={classes.button}>
-              Start free trial
-              <KeyboardArrowRightIcon />
+            <Button className={classes.button} 
+            style={{width:"80%"}}>
+              <Link
+                to="/register"  
+                style={{
+                  color:"white", 
+                  textDecoration:"none", 
+                  display:"flex",
+                  flexDirection:"row",
+                  flexWrap:"nowrap",
+                  justifyContent:"space-evenly",
+                  alignItems:"center"
+                }}>              
+                <p>Start free trial</p>
+                <KeyboardArrowRightIcon />
+              </Link>
             </Button>
           </div>
           <div style={{width:"56%", marginLeft:"1%"}}>
@@ -212,21 +236,35 @@ const Demo = () => {
 
       <Container className="sectionEleven">
         <Box 
-          style={{backgroundColor:"blue"}}
+          style={{backgroundColor:"#318CE7"}}
           display="flex"
           color="white"
           flexDirection="column"
           p={2}
-          m={2}
+          // m={2}
+          fontSize="2.5vw"
           justifyContent="center"
           alignItems="center"
-          height="50vmin"
+          height="60vmin"
           width="100%">
           <h2>Choose a better way to work</h2>
           <p>No credit card details | No additional installation | No time wasting</p>
-          <Button className={classes.button}>
-            Start my free trial
-            <KeyboardArrowRightIcon />
+          <Button className={classes.button}
+            style={{width:"40%"}}>
+            <Link
+              to="/register"  
+              style={{
+                color:"white",
+                textDecoration:"none",
+                display:"flex",
+                flexDirection:"row",
+                flexWrap:"nowrap",
+                justifyContent:"space-evenly",
+                alignItems:"center"
+              }}>            
+              Start my free trial
+              <KeyboardArrowRightIcon />
+            </Link>
           </Button>
         </Box>
       </Container>

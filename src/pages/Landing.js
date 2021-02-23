@@ -160,10 +160,22 @@ const Landing = () => {
               width="50%"
               borderRadius="5px"
               boxShadow={2}
-              zIndex="tooltip">
-              <FontAwesomeIcon icon={faAward} size="3x" />
-              <h6>Best Collaboration Software</h6>
-              <p>Africa tech coalition award 2020</p>
+              zIndex="tooltip"
+              >
+              <Box
+                display="flex"
+                flexWrap="nowrap"
+                justifyContent="space-evenly"
+                alignItems="center"
+                width="100%"
+                >
+                <FontAwesomeIcon icon={faAward} size="5x" color="gold" />
+                <div style={{fontSize:"2vw"}}>
+                  <h6>Best Collaboration Software</h6>
+                  <p>Africa tech coalition award 2020</p>
+                </div>
+              </Box>
+                
             </Box>
             <Box
               position="absolute"

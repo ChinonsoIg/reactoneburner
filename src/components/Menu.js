@@ -205,7 +205,7 @@ const MenuBar = ({ menuProps1, menuProps1Icon, menuProps2, menuProps3, menuProps
       <AppBar position="static" className={classes.centre}>
         <Toolbar>
         <Box style={{height:"70px"}} lineHeight={1.5}>
-          <Link to="/landing">
+          <Link to="/demo">
             <img src={oneburner_logo} alt="Logo" style={{maxWidth:"100%", maxHeight:"100%"}} />
           </Link>
         </Box>

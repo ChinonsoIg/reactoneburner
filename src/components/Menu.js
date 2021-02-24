@@ -225,7 +225,7 @@ const MenuBar = ({ menuProps1, menuProps1Icon, menuProps2, menuProps3, menuProps
       <AppBar position="static" className={classes.centre}>
         <Toolbar>
         <Box style={{height:"70px"}} lineHeight={1.5}>
-          <Link to="/demo">
+          <Link to="/landing">
             <img src={oneburner_logo} alt="Logo" style={{maxWidth:"100%", maxHeight:"100%"}} />
           </Link>
         </Box>
@@ -316,7 +316,11 @@ const MenuBar = ({ menuProps1, menuProps1Icon, menuProps2, menuProps3, menuProps
           <p className={classes.menuItems}>{menuProps4}</p>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <p className={classes.menuItemsRight}>{menuProps5}</p>
+            <p className={classes.menuItemsRight}>
+              <Link to="/demo"  style={{ textDecoration:"none"}}>
+                {menuProps5}
+              </Link>
+            </p>
             <p className={classes.menuItemsRight}>
               <Link to="/login" style={{ textDecoration:"none"}}>
                 {menuProps6}

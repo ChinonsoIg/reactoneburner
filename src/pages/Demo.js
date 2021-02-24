@@ -32,7 +32,6 @@ import fav_tools from '../svgs/constants/fav_tools.svg';
 
 const useStyles = makeStyles((theme) => ({
   sectionThree: {
-    // marginBottom: theme.spacing(5),
     marginBottom: "10px",
   },
   sectionThree: {
@@ -44,9 +43,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "50px",
     padding: "1.5%",
     fontSize: "2vw",
-    // width: "75%",
-    // height: "5%",
-
   },
 }));
 

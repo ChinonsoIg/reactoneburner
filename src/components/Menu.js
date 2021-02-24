@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "20px",
     backgroundColor: "white",
     color: "black",
-    height: "70px"
+    height: "70px",
+    lineHeight: "1",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -88,10 +89,19 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
   },
   button: {
-    backgroundColor: "purple",
-    padding: "0.2rem",
-    color: 'white',
-    borderRadius: '20px',
+    // backgroundColor: "purple",
+    // padding: "0.2rem",
+    // color: 'white',
+    // borderRadius: '20px',
+
+    backgroundColor: "#0039a6",
+    color: "white",
+    borderRadius: "40px",
+    padding: "1px",
+    fontSize: "14px",
+    width: "160px",
+    height: "40px",
+    // lineHeight: "40px"
   },
 }));
 
@@ -157,7 +167,17 @@ const MenuBar = ({ menuProps1, menuProps1Icon, menuProps2, menuProps3, menuProps
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <Button className={classes.button}>
-          <Link to="/register" style={{color:"white", textDecoration:"none"}}>
+          <Link 
+            to="/register" 
+            style={{
+              color:"white", 
+              textDecoration:"none", 
+              display:"flex",
+              flexDirection:"row",
+              flexWrap:"nowrap",
+              justifyContent:"space-evenly",
+              alignItems:"center"
+            }}>
             Try For Free
             <KeyboardArrowRightIcon />
           </Link>
@@ -212,10 +232,18 @@ const MenuBar = ({ menuProps1, menuProps1Icon, menuProps2, menuProps3, menuProps
 
         <p className={classes.menuItems}>
           <span
+            className="producthover"
             ref={anchorRef}
             aria-controls={open ? 'menu-list-grow' : undefined}
             aria-haspopup="true"
             onClick={handleToggle}
+            style={{  
+              display:"flex",
+              flexDirection:"row",
+              flexWrap:"nowrap",
+              justifyContent:"center",
+              alignItems:"center"
+            }}
           >
             {menuProps1}
             {menuProps1Icon}
@@ -295,7 +323,17 @@ const MenuBar = ({ menuProps1, menuProps1Icon, menuProps2, menuProps3, menuProps
               </Link>
             </p>
             <Button className={classes.button}>
-              <Link to="/register" style={{color:"white", textDecoration:"none"}}>
+              <Link 
+                to="/register"  
+                style={{
+                  color:"white", 
+                  textDecoration:"none", 
+                  display:"flex",
+                  flexDirection:"row",
+                  flexWrap:"nowrap",
+                  justifyContent:"space-evenly",
+                  alignItems:"center"
+                }}>
                 Try for free
                 <KeyboardArrowRightIcon />
               </Link>

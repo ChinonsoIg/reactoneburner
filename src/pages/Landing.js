@@ -77,7 +77,7 @@ const Landing = () => {
           menuProps5="Contact Sales"
           menuProps6="Login"
         />
-        
+
         <CssBaseline />
 
         <Container className={classes.sectionOneLanding}>

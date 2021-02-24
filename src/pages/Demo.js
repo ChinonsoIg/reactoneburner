@@ -16,6 +16,7 @@ import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 
 // Icons
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 // Images
@@ -54,8 +55,18 @@ const Demo = () => {
 
   return (
     <>
-      <Menu />
+      <Menu
+        menuProps1="Products" 
+        menuProps1Icon={<ExpandMoreIcon/>} 
+        menuProps2="Pricing"
+        menuProps3="Enterprise"
+        menuProps4="Support"
+        menuProps5="Contact Sales"
+        menuProps6="Login"
+      />
+
       <CssBaseline />
+
       <Container className="sectionOne">
         <Box
           display="flex"

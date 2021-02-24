@@ -15,7 +15,7 @@ import Box from '@material-ui/core/Box';
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faAward } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faAward,  } from "@fortawesome/free-solid-svg-icons";
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 // Components
@@ -77,7 +77,9 @@ const Landing = () => {
           menuProps5="Contact Sales"
           menuProps6="Login"
         />
+        
         <CssBaseline />
+
         <Container className={classes.sectionOneLanding}>
           <Box width="100%" height="100vmin" marginTop="40px">
             <img src={section_one_landing} style={{width:"100%"}} />
